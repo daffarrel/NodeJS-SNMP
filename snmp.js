@@ -8,8 +8,8 @@ var request= require('request')
 var host = '127.0.0.1';
 var community = 'public';
 
-//Generic App Endpoint
-var url='https://r.3gl.net/hawklogserver/f.p';
+//Endpoint to push
+var url=' ';
 
 //Specify the intervals in minutes.
 var interval=0.05;
@@ -38,7 +38,7 @@ session.getAll({ oids: oids }, function (err, varbinds) {
 
 function postData(data){
 
-//Create payload to push it to Catchpoint. The index of data corresponds to the index of the OIDs array.
+//Create payload. The index of data corresponds to the index of the OIDs array.
 var payload = '{"s":332,"d":{"b":'+data[0]+',"r":'+data[1]+'}}';
 console.log(payload);
 
